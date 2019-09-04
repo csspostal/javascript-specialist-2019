@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Lorum Picsum API Exercise 15 JavaScript Final Project | Tom Spencer</title>
+        
+    </head>
+    
+    <body>
+        <h1>Final Project</h1>
+        <div id="userForm">
+        
+            <form name="getImagesizes">
+            
+            <label for="imageWidth">Enter Image Width:</label>
+            <input type="number" id="imageWidth"><br/><br/>
+                
+            <label for="imageHeight">Enter Image Height:</label>
+            <input type="number" id="imageHeight"><br/><br/>
+                
+            <lablel for="grayScaleImage">Check for a Gray Scale Image</lablel>
+            <input type="checkbox" id="grayScaleImage"><br/><br/>
+                
+            <input type="button" id="loadImage" onclick="getImageSizes()" value="Load Image">
+            
+            
+            </form>
+        
+        </div>
+        <div id="photoHolder"></div>
+        
+        
+      
+            
+       
+        
+        <script>
+            function getImageSizes() {
+                let imgWidth = document.getElementById('imageWidth').value;
+                let imgHeight = document.getElementById('imageHeight').value;
+                let grayScaleChecked = document.getElementById('grayScaleImage').checked;
+                document.getElementById('photoHolder').innerHTML = ""
+               
+                
+                if(grayScaleChecked == true) {
+                    
+                    
+                    //load random grayscale picture
+                var img = null;
+                let imgPromise = new Promise(function(resolve,reject){
+                img = new Image();
+                img.addEventListener('load', resolve(img));
+                img.addEventListener('error', reject('Could not load image'));
+                img.src = `https://picsum.photos/${imgWidth}/${imgHeight}?grayscale`
+            });
+            
+                imgPromise.then(function(fromResolve){
+                
+                let node = document.getElementById('photoHolder');
+                node.appendChild(img);
+            }).catch(function(fromReject){
+                console.log(fromReject);
+            });
+                
+                    
+                } else {
+                    
+                    //load random colour picture
+                var img = null;
+                let imgPromise = new Promise(function(resolve,reject){
+                img = new Image();
+                img.addEventListener('load', resolve(img));
+                img.addEventListener('error', reject('Could not load image'));
+                img.src = `https://picsum.photos/${imgWidth}/${imgHeight}`
+            });
+            
+                imgPromise.then(function(fromResolve){
+                
+                let node = document.getElementById('photoHolder');
+                node.appendChild(img);
+            }).catch(function(fromReject){
+                console.log(fromReject);
+            });
+                }
+                
+
+                    
+                }
+                
+                
+                
+                
+            
+            
+                        
+        
+            
+
+         
+            
+            
+        </script>
+                
+                
+                
+            
+            
+            
+        
+        
+    </body>
+</html>

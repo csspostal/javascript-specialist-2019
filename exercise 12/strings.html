@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>sets</title>
+        
+    </head>
+    
+    <body>
+        
+        <div id="output"></div>
+        
+        <script>
+            
+           let poem = `Roses are red
+Violets are blue
+I like chocolate
+and so do you!`;
+            
+            console.log(poem);
+          //  document.getElementById('output').innerHTML = poem;
+            
+            
+            let employee = {
+                name: "John",
+                position: "Production Assistant",
+                location: "Norwalk, CT",
+                age: 30
+            };
+            
+            
+            let employeeInfo = function(object){
+                
+                let output = `${object.name} is our ${object.position} in our ${object.location} location and is ${object.age} years old!`;
+                return output;
+            }
+            
+            document.getElementById('output').innerHTML = employeeInfo(employee);
+            
+            let instructor = "mark Lassoff";
+            
+            console.log(`The employees name is ${employee.name}`);
+            console.log(`Instructor: ${instructor}`);
+            
+            
+            
+            
+        </script>
+        
+    </body>
+</html>

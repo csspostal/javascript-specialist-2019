@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+    
+    </head>
+
+    
+    <body>
+        
+        <div id="output"></div>
+        
+        <script>
+        
+            var computers = ["Apple", "IBM", "Commodore", "TRS-80", "Amiga"];
+            
+            var family = new Array("Mark", "Joan", "Rick", "Brett", "Kerry");
+            
+            document.getElementById('output').innerHTML = computers[2];
+            document.getElementById('output').innerHTML += "<br/>"  + family[3];
+            
+            computers[0] = "Mac";
+            document.getElementById('output').innerHTML += "<br/>" + computers[0];
+            
+            document.getElementById('output').innerHTML += "<br/>" + family;
+            
+            var out = "";
+            //Loop through the array
+            
+            for(var x = 0; x < computers.length; x++)
+                
+                {
+                    
+                    out += computers[x];
+                    out += "<br/>";
+                    
+                }
+            
+            document.getElementById('output').innerHTML = out;
+            
+            family.push("Carol");
+            document.getElementById('output').innerHTML = family.sort();
+            
+            computers.pop();
+            document.getElementById('output').innerHTML +=  "<p>" + computers.sort();
+            
+        
+        </script>
+    
+    
+    </body>
+    
+</html>

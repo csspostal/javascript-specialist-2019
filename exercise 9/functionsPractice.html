@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+    
+    </head>
+
+    
+    <body>
+        
+        <div id="output"></div>
+        
+        
+        
+        <script>
+            
+            //llamda function
+            
+            var greeting = (name) => ("Greetings, " + name);
+            var cube = (myValue) => (myValue * myValue * myValue * myValue);
+            
+            alert(greeting("Bob"));
+            
+            document.getElementById("output").innerHTML = cube(3);
+            
+            
+            /*
+            
+            //function contstructor
+            let greeting = new Function("name", "return('Greetings ' + name)");
+            
+            var message = greeting("Valerie")
+            
+            alert(message);
+            
+            
+            //anonymous function
+            
+            let greetings = function(name) {return ("Greetings " + name)}
+            
+            alert(greetings("Brett"));
+            
+            function output(...params) {
+                alert(params.length);
+                for(i=0; i < params.length; i++) {
+                    alert(params[i]);
+                }
+            }
+            
+            output(10.2, 8.5, 7.1, 6.5, 1.1);
+            
+            function greetings(userName) {
+                
+                let message = "<h1>Greetings " + userName + "! " + "It's going to be a great day.</h1>" ;
+                return message;
+            }
+            
+            //function call
+            
+            let myMessage = greetings("Mark");
+            document.getElementById('output').innerHTML = myMessage; 
+            
+            function multiply(x=1,y=2) {
+                return x * y;
+            }
+            
+            alert(multiply(10));
+            
+            
+            
+            // rest parameters
+            
+            function output(...params)  {
+                
+                alert(params.length);
+                
+                for(i=0; i < params.length; i++) {
+                    alert(params[i]);
+                }
+            }
+            
+            //output("x", "y", "z");
+            
+            output(10.2, 8.5, 7.1, 6.5, 1.1);
+            
+            output("x", "y", "z"); */
+        
+        </script>
+    
+    
+    </body>
+    
+</html>

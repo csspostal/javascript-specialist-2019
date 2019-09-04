@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Vehicle Exercise 14 JavaScript Tome Spencer</title>
+        
+    </head>
+    
+    <body>
+        
+        <div id="output"></div>
+        
+        
+      
+            
+        <script src="vehicle.js"></script>
+        
+        <script>
+            
+            //creates new vehicle object named my car in the vehicle class
+        
+            let myCar = new Vehicle("Blue", 255, 20, 200);
+            
+            //created bus vehicle object
+            let myBus = new BusVehicle("Yellow", 90, 10, 60, 45);
+            
+            //created Abumlance Vehicle object            
+            let myAmbulance = new AmbulanceVehicle("White", 90, 40, 90, true);
+           
+       //turns car on
+            
+        console.log(myCar.turnOn());
+            
+
+            
+            //accelrates vehicle to a set speed
+            
+            console.log(myCar.accelerateVehicle());
+                        
+            //turns vehicle left by set amount of degrees
+            
+            console.log(myCar.turnLeft());
+            
+            // turns vehicle to the right by set amount of degrees
+            
+            // turns vehicle to the right by set amount of degrees
+            
+            console.log(myCar.turnRight());
+            
+             //brakes vehicle from current speed to 0
+            
+            console.log(myCar.brake());
+               
+           // turns car off
+            
+            console.log(myCar.turnOff());
+            
+            
+             //turns bus on
+            
+        console.log(myBus.turnOn());
+            
+
+            
+            //accelrates vehicle to a set speed
+            
+            console.log(myBus.accelerateVehicle());
+                        
+            //turns bus vehicle left by set amount of degrees
+            
+            console.log(myBus.turnLeft());
+            
+            
+            // turns bus vehicle to the right by set amount of degrees
+            
+            console.log(myBus.turnRight());
+            
+             //brakes bus vehicle from current speed to 0
+            
+            console.log(myBus.brake());
+               
+           // turns bus off
+            
+            console.log(myBus.turnOff());
+            
+            
+                         //turns ambulance on
+            
+        console.log(myAmbulance.turnOn());
+            
+            //check sirens status
+            
+            console.log(myAmbulance.turnSirensOn());
+            
+            
+            
+            //accelrates vehicle to a set speed
+            
+            console.log(myAmbulance.accelerateVehicle());
+                        
+            //turns ambulance vehicle left by set amount of degrees
+            
+            console.log(myAmbulance.turnLeft());
+            
+            
+            // turns ambulance vehicle to the right by set amount of degrees
+            
+            console.log(myAmbulance.turnRight());
+            
+             //brakes ambulance vehicle from current speed to 0
+            
+            console.log(myAmbulance.brake());
+            
+            // turn sirens and lights off
+            
+            console.log(myAmbulance.turnSirensOff());
+               
+           // turns ambulance off
+            
+            console.log(myAmbulance.turnOff());
+            
+        </script>
+                
+                
+                
+            
+            
+            
+        
+        
+    </body>
+</html>

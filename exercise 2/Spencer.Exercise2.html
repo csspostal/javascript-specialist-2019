@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab #2</title>
+</head>
+<body>
+    <div id="out"></div>
+    
+    <script>
+        
+        var name1 = "Tom";
+        var name2 = "Bob";
+        var name3 = "Mary";
+        var name4 = "Caitlyn";
+        var name5 = "Red";
+        var name6 = "Douglas";
+        var name7 = "Judy";
+        var name8 = "Susan";
+        
+        var output = ""; 
+        
+        var listSeparator = prompt("Enter list separator ( : , | ,  >  )");
+        
+        output += name1 + " " + listSeparator + " ";
+        output += name2 + " " + listSeparator + " ";
+        output += name3 + " " + listSeparator + " ";
+        output += name4 + " " + listSeparator + " ";
+        output += name5 + " " + listSeparator + " ";
+        output += name6 + " " + listSeparator + " ";
+        output += name7 + " " + listSeparator + " ";
+        output += name8;
+
+        document.getElementById('out').innerHTML = output;
+
+    </script>
+</body>
+</html>

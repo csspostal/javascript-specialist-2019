@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+        <title>Exercise 3 JavaScript Application Development | Tom Spencer</title>
+    
+    </head>
+
+    
+    <body>
+        
+        <div id="output"></div>
+        
+        <script>
+        
+            var operand1 = parseFloat(prompt("Enter a number between 1 and 100"));
+            var operand2 = parseFloat(prompt("Enter another number between 1 and 100"));
+            
+            var sumOp = operand1 + operand2;
+            var subOp = operand1 - operand2;
+            var mulOp = operand1 * operand2;
+            var equOp = operand1 == operand2;
+            var smallOp = operand1 < operand2;
+            var modOp = operand1%operand2;
+            var coffeeLink = "Buy me a Coffee";
+            
+            var displayAnswer = "";
+            
+            displayAnswer = "The Sum of " + operand1 + " and " + operand2 + " is " + sumOp + ".<br/>";
+            
+            displayAnswer += "The Result of subtracting " + operand2 + " from " + operand1 + " is " + subOp + " | eg.(" + operand1 + "-" + operand2 + "=" + subOp + ")<br/>";
+            
+            displayAnswer += "The result if you multiple " + operand1 + "*" + operand2 + " is " + mulOp + "<br/>";
+            
+            displayAnswer += "True or False is " + operand1 + " equal to " + operand2 + ". The answer is " + equOp + "<br/>";
+            
+            displayAnswer += "True or False is " + operand1 + " smaller than " + operand2 + ". the answer is " + smallOp + "<br/>"; 
+            
+         if (modOp != 0) {
+             
+             displayAnswer += "You cannot divide " + operand2 + " into " + operand1 + " evenly! <br/>";
+         } else {
+             
+             displayAnswer += "You can divide " + operand2 + " into " + operand1 + " evenly! ";
+         }
+            
+            displayAnswer += "<br/><br/> You now have come to the end of exercise 3 hope you enjoyed it. <br/> Please follow @csspostal on social media and if you'd like to buy me a coffe you can do so here  " + coffeeLink.link("https://www.paypal.me/csspostal");
+            
+            document.getElementById('output').innerHTML = displayAnswer;
+            // just kidding about the coffee was doing exercise 3 and wife was still cleaning the bathroom and I was avoiding helping :) I did buy her flowers and dinner though so I'm not all bad. lol 
+            
+        </script>
+        
+        
+    
+    </body>
+    
+</html>

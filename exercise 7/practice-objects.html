@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+    
+    </head>
+
+    
+    <body>
+        
+        <div id="output"></div>
+        
+        <script>
+        //class exists as a plan blueprint or a model of the object
+          var car = {};
+            //properties adjective human colour weight gender example when accessing no parenthesies 
+            
+            car.type = "Sedan";
+            car.make = "Honda";
+            car.model = "Civic";
+            car.year = 2015;
+            car.weight = 3000;
+            
+            //methods aka verbs what the object can do when accesing use parenthesies
+            
+            car.startCar = function()
+            {
+                alert("Car is started");
+            }
+            
+            car.stopCar = function()
+            {
+                alert("Car is stopped");
+                
+            }
+            
+            var out = "Car Type: " + car.type;
+            out += "<br/>Car Make: " + car.make;
+            out += "<br/>Year: " + car.year;
+            
+            car.startCar();
+            car.stopCar();
+            
+            document.getElementById('output').innerHTML = out;
+        
+        </script>
+    
+    
+    </body>
+    
+</html>

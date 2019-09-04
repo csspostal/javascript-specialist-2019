@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+    
+    </head>
+
+    
+    <body>
+        
+        <div id="out"></div>
+        
+        <script>
+            let output = "";
+        let factor = 3;
+            
+           init();
+    
+        function init()
+        {
+        
+         const maxValue = 100;
+          const minValue = 0;
+
+
+            for(let x = maxValue; x > minValue; x--)
+            {
+                if(x % factor == 0)
+                    {
+                        
+                        output += x;
+                        output += "<br/>";
+                    }
+            }
+        }
+
+        document.getElementById("out").innerHTML = "Factors of " + factor 
+        + ": " + output + "<br/> "; 
+        document.getElementById("out").innerHTML += output;
+        
+        </script>
+    
+    
+    </body>
+    
+</html>

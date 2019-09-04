@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Destructoring</title>
+        
+    </head>
+    
+    <body>
+        
+        <div id="output"></div>
+        
+        <script>
+            
+          let person = {
+              first: "Tom",
+              last: "Spencer",
+              age: 45,
+              city: "Port Hope",
+              province: "Ontario"
+          };
+            
+            console.log(person.last);
+            
+            let { first, last, city, age, province} = person;
+            console.log(first);
+            console.log(last);
+            console.log(city);
+            console.log(province);
+            console.log(age);
+            
+            let company = {
+                name: "Framework Television",
+                    social: {twitter: "https://twitter.com/fw_social",
+                           facebook: "https://facebook.com/fraomworktechnicallyspeaking"}
+            }
+            
+            
+            let {twitter, facebook} = company.social;
+            console.log(twitter);
+            console.log(facebook);
+        </script>
+        
+    </body>
+</html>

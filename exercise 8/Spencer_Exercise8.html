@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+    
+    </head>
+
+    
+    <body>
+        
+        <div id="out"></div>
+        <div id="out2"></div>
+        
+        <script>
+            
+            let firstNumber = parseInt(prompt("Enter first number to be calclualted"));
+            let secondNumber = parseInt(prompt("Enter second number to be calclualted"));
+            let operator = prompt("Enter Operation you wish to be performed on these Numbers /n(+, -, *, /, %)");
+            
+            let result = 0;
+            const showResult = function() {
+                
+                switch(operator) {
+                        
+                    case "+":
+                       
+                       result = firstNumber + secondNumber;
+                       break;
+                        
+                    case "-":
+                        
+                        result = firstNumber - secondNumber;
+                        break;
+                        
+                    case "*":
+                        
+                        result = firstNumber * secondNumber;
+                        break;
+                        
+                    case "/":
+                        
+                        result = firstNumber / secondNumber;
+                        break;
+                        
+                    case "%":
+                        
+                        result = firstNumber % secondNumber;
+                        break;
+                        
+                    default:
+                        
+                        result = "help a starving coder by making a donation at <a href='https://www.paypal.me/csspostal'>coffee please</a>";
+                       
+                       }
+                
+                
+                
+                document.getElementById("out").innerHTML = "JavaScript Exercise 8 for Tom Spencer<br/>" + firstNumber + " " + operator + " " +  secondNumber + " = " + result;
+            }
+            
+            showResult();
+        
+        </script>
+    
+    
+    </body>
+    
+</html>

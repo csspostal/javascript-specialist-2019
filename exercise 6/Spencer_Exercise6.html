@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+    
+    </head>
+
+    
+    <body>
+        
+        <div id="output"></div>
+        
+        
+        <script>
+        
+            var names = [];
+            var theName = "";
+            var total = 0;
+            var out = "";
+            
+            
+            while (theName != "XXX")
+                
+                {
+                    
+                    theName = prompt("Enter an a GPA or XXX to Stop");
+                    
+                    if(theName != "XXX") 
+                        
+                        {
+                            names.push(parseFloat(theName));
+                        }
+                    
+                }
+            
+            for(var x = 0; x < names.length; x++)
+                
+            {
+                total =  total + names[x];
+                alert(total);
+                
+            }
+            
+            //get length of arra and subtract one because array starts at 0 and if you use 4 there is no index at 4 and you'll get NaN or undefined if you don't
+            
+            var low = names.length - 1;
+            
+                       
+            var average = total / names.length;
+            
+            
+            //sorts the array lowest to highest
+            names.sort();
+            //reverses array to it's sorted highest to lowest
+            names.reverse();
+            
+            out += "<h2>GPA's order from Largest to Smallest</h2>" + "<br>" + names;
+            
+            out += "<h2>Average of the GPA's</h2>" + average;
+            
+            out += "<h2>High Low GPA</h2>" + "Higest GPA is: " + names[0] + "<br/>" + "Lowest GPA is: " + names[low];
+            
+            //find list of outstanding gpa's
+            
+            var outStandingGpas = "";
+            
+            out += "<h2>List of Outstanding GPA's</h2>" + "<br/>";
+            
+            for (var x = 0; x < names.length; x++)
+                {
+                    if (names[x] > 3.4) {
+                        out += names[x];
+                        out += "<br/>";
+                    }
+                }
+           
+            document.getElementById('output').innerHTML = out;
+            
+        
+        </script>
+    
+    
+    </body>
+    
+</html>

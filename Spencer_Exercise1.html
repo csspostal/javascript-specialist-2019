@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <title>Mad Lib Final Exercise JavaScrpit for Application Development 2019</title>
+    </head>
+    
+    <body>
+    
+        <div id="output"></div>
+        
+        <script>
+            var properYourName = prompt("Enter Your Name");
+            var properPartnersName = prompt("Enter Partners Name");
+            var verb = prompt("Enter a verb");
+            var verb2 = prompt("Enter a second verb(past tense)");
+            var verb3 = prompt("Enter a third verb (past tense)");
+            var adj = prompt("Enter an adjective");
+            var adj2 = prompt("Enter another adjective");
+            var adj3 = prompt("Enter one last adjective");
+            
+            var out = "Roses are Red my love." + properPartnersName +  " Violets are your favourite colour blue. <br/>";
+            out += properYourName + " " + verb + " left town on a Jet Plane. <br/>";
+            out += properYourName + " " + verb2 + " a jacket.<br/>";
+            out += "And " + properPartnersName + " " + verb3 + " " + properYourName;
+            out += "<br/>But " + properPartnersName + " is " + adj + " " + " at the thought of whether " + properYourName + " will come back home.<br/>";
+            out += "And kind of " + adj2 + " " + properYourName + " would feel the same too!<br/>";
+            out += properPartnersName + " was " + adj3 + " for " + properYourName + "'s return!";
+            
+            document.getElementById('output').innerHTML = out;
+            
+        </script>
+    
+    </body>
+
+</html>

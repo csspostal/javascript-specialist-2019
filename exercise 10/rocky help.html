@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Camp Whack-a-Doo</title>
+        
+    </head>
+    
+    <body>
+        
+        <h1>Camp Whack-a-Doo Chores</h1>
+    <p class="campChore" value="Front Room Sweep">Front Room Sweep:  
+    <input type="text" class="name" placeholder="Camper's Name">
+        <button id="addToMap">Add To Schedule</button><br>
+    </p>
+    <p class="campChore" value="Back Room Sweep">Back Room Sweep:  
+    <input type="text" class="name" placeholder="Camper's Name">
+        <button id="addToMap">Add To Schedule</button><br>
+    </p>
+    <p class="campChore" value="Outside Grounds">Outside Grounds:  
+    <input type="text" class="name" placeholder="Camper's Name">
+        <button id="addToMap">Add To Schedule</button><br>
+    </p>
+    <p class="campChore" value="Clean Toilet">Clean Toilet:  
+    <input type="text" class="name" placeholder="Camper's Name">
+        <button id="addToMap">Add To Schedule</button><br>
+    </p>
+    <p class="campChore" value="Clean Sink">Clean Sink:  
+    <input type="text" class="name" placeholder="Camper's Name">
+        <button id="addToMap">Add To Schedule</button><br>
+    </p>
+    <p class="campChore" value="Trash Patrol">Trash Patrol and Supplies:  
+    <input type="text" class="name" placeholder="Camper's Name">
+        <button id="addToMap">Add To Schedule</button><br>
+    </p><br>
+    <button id="displayList">Display Chore Assignments</button> <br><br>
+    <div id="output"></div>
+        
+        <script>
+            
+           const ADD = document.getElementById('addToMap');
+        const DISPLAY = document.getElementById('displayList');
+        
+        let chores = new Map();
+
+        
+        ADD.onclick = function() {
+            const campChore = document.getElementsByClassName('campChore');
+           
+            const name = document.getElementsByClassName('name');
+            chores.set(campChore.value,name.value);
+            campChore.value = "";
+            name.value = "";
+            
+        };
+       
+        DISPLAY.onclick = function() {
+            let out = "";
+            for (let x of chores.entries()) {
+                out += x[0] + ":  " + x[1];
+                out += "<br>";
+            }
+            document.getElementById('output').innerHTML = out.entries;
+        }
+        </script>
+        
+    </body>
+</html>

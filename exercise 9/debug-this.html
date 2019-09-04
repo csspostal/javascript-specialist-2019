@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+    
+    </head>
+
+    
+    <body>
+        
+        <div id="output"></div>
+        
+        
+        
+        <script>
+            
+            
+            let addParagraphs = function(...params)    {
+                
+                for(i=0; i <params.length; i++) {
+                    document.getElementById('output').innerHTML += params[i];
+                }
+            }
+            
+            addParagraphs("<h1>Welcome</h1>", "<p>We're very glad to have you in this course. </p>",  "<p>Feel free to ask us any questions!</p>")
+        
+        </script>
+    
+    
+    </body>
+    
+</html>

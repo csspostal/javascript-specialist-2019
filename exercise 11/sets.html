@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>sets</title>
+        
+    </head>
+    
+    <body>
+        
+        <div id="output"></div>
+        
+        <script>
+            
+            let songs = new Set();
+            songs.add("Don't Stop Believing");
+            songs.add("Eye of the Tiger");
+            songs.add("Every Breath You Take");
+            
+            let gpas = new Set([4.0, 3.82, 2.225, 3.12]);
+            
+            let states = new Set().add("Connecticut").add("Texas").add("New York").add("Illinois").add("Florida");
+            
+            //see if a value is contained in the set return true
+            
+            if(states.has("Connecticut")) {
+                alert("Present!")
+            }
+            
+            //remove values from a set
+            
+            gpas.delete(4.0);
+            
+            // get all values out of a set
+            
+            for (let state of states){
+                alert(state);
+            }
+            
+        </script>
+        
+    </body>
+</html>

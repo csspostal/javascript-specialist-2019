@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Employee Info</title>
+        
+    </head>
+    
+    <body>
+        
+        <script src="employee.js"></script>
+        
+        <script>
+        
+            let scott = new Employee("Scott", "Miller", "000-00-0000", "accountant", 36.50);
+            //scott.fire();
+            
+            let fred = new PTEmployee("Fred", "Smith", "000-00-0000", "programmer", 40, 20 );
+            
+            
+           // alert(scott.info());
+            fred.hoursPerWeek = 40;
+            alert(fred.info());
+        
+        </script>
+        
+    </body>
+</html>
+

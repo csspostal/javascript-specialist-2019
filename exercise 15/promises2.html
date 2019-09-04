@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Promises</title>
+        
+    </head>
+    
+    <body>
+        <div id="image-holder"></div>
+        
+        
+        <script>
+        
+           //http://thecatapi.com/api/images/get?format=src&type=jpg&size=medium
+            
+            var img = null;
+            let imgPromise = new Promise(function(resolve,reject){
+                img = new Image();
+                img.addEventListener('load', resolve(img));
+                img.addEventListener('error', reject('Could not load image'));
+                img.src = "http://thecatapi.com/api/images/get?format=src&type=jpg&size=medium"
+            });
+            
+            imgPromise.then(function(fromResolve){
+                console.log("Them image has loaded. Yay!");
+                let node = document.getElementById('image-holder');
+                node.appendChild(img);
+            }).catch(function(fromReject){
+                console.log(fromReject);
+            });
+        
+        </script>
+        
+    </body>
+</html>
+

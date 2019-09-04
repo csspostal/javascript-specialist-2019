@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Madder Libs Tom Spencer Javascript 2019 Exercise 12</title>
+        
+        
+        
+    </head>
+    
+    <body>
+        
+        <div id="output"></div>
+        
+        <script>
+            
+            // create unique variables to prompt user for each item for Madder Libs story
+            
+            let pieceOfClothingA = prompt('Please enter a piece of Clothing');
+            
+            let partOfBodyB = prompt('Please enter a part of your body');
+            
+            let partOfBodyC = prompt('Please enter a different part of your body');
+            
+            let verbBaseFormD = prompt('Please enter a VERB Base Form')
+            
+            let partOfBodyE = prompt('Please enter another part of your body');
+            
+            let verbBaseFormF = prompt('Please enter a verb base form');
+            
+            let nounPluralG = prompt('Please enter a Plural Noun');
+            
+            let nounPluralH = prompt('Please enter another Plural Noun');
+            
+            let verbBaseFormI = prompt('Please enter Verb Base From last one ');
+            
+            let floss = document.createElement("img");
+            floss.src = "floss.jpg";
+            document.body.appendChild(floss);
+            
+                  
+            document.getElementById('output').innerHTML = "<h1> How to do the Floss Dance</h1>" + `1) Put on some music
+2) Put on ${pieceOfClothingA} (optional)
+3) Stand with your ${partOfBodyB} ever so slightly bent 
+4) Put your hands in fists
+5) Place your ${partOfBodyC}, relaxed, at the side of your body 
+6)Begin to ${verbBaseFormD} your ${partOfBodyE} left and right around your torso in the oppiste direction to your hips
+7) Keep doing it and increase speed and ${verbBaseFormF} ${nounPluralG} occasionally for effect.
+After building confidence, you can also ${nounPluralH} ${verbBaseFormI} with yoru arms if desired, but this is not mandatory
+
+
+
+` + "<br/><br/>";
+            
+        </script>
+        
+    </body>
+</html>

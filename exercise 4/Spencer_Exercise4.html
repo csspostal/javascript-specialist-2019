@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        
+        <title>Exercise 4 JavaScript Application Development | Tom Spencer</title>
+    
+    
+    </head>
+
+    
+    <body>
+        
+        <div id="output"></div>
+        
+        <script>
+        
+            var firstNumber = parseFloat(prompt("Enter a number"));
+            var secondNumber = parseFloat(prompt("Enter a Second Number"));
+            var mathOperation = prompt("Enter type of math operation you want preformed Example: +, -, *, /, and %");
+            var mathAnswer = 0;
+            var displayAnswer = "";
+            
+           /* if (mathOperation === "+") {
+                
+                mathAnswer = firstNumber + secondNumber;
+                displayAnswer = "Your JavaScript Calculator Results : <br/>" + firstNumber + " " +   mathOperation + " " + secondNumber + " = " + mathAnswer;
+            } else if (mathOperation === "-") {
+                
+                mathAnswer = firstNumber - secondNumber;
+                displayAnswer = "Your JavaScript Calculator Results : <br/>" + firstNumber + " " +   mathOperation + " " + secondNumber + " = " + mathAnswer;
+                
+            } else if (mathOperation === "*") {
+                
+                mathAnswer = firstNumber * secondNumber;
+                displayAnswer = "Your JavaScript Calculator Results : <br/>" + firstNumber + " " +   mathOperation + " " + secondNumber + " = " + mathAnswer;
+                
+            } else if (mathOperation === "/") {
+                
+                mathAnswer = firstNumber / secondNumber;
+                displayAnswer = "Your JavaScript Calculator Results : <br/>" + firstNumber + " " +   mathOperation + " " + secondNumber + " = " + mathAnswer;
+                
+            } else if (mathOperation === "%") {
+                
+                mathAnswer = firstNumber % secondNumber;
+                displayAnswer = "Your JavaScript Calculator Results : <br/>" + firstNumber + " " +   mathOperation + " " + secondNumber + " = " + mathAnswer;
+            } else {
+                
+                mathAnswer = firstNumber + secondNumber;
+                displayAnswer = "Your JavaScript Calculator Results : <br/> you did not enter a valid aretimatic operator. Therefore no math cacluation could be preformed!" ;
+            } 
+            */
+            
+             switch (mathOperation) {
+                 
+                 case "+":
+                    mathAnswer = firstNumber + secondNumber;
+                    displayAnswer = "Your JavaScript Calculator Results : <br/>" + firstNumber + " " +   mathOperation + " " + secondNumber + " = " + mathAnswer;
+                    break;
+                 
+                 case "-":
+                
+                    mathAnswer = firstNumber - secondNumber;
+                    displayAnswer = "Your JavaScript Calculator Results : <br/>" + firstNumber + " " +   mathOperation + " " + secondNumber + " = " + mathAnswer;
+                    break;
+                
+                 case "*":
+                
+                    mathAnswer = firstNumber * secondNumber;
+                    displayAnswer = "Your JavaScript Calculator Results : <br/>" + firstNumber + " " +   mathOperation + " " + secondNumber + " = " + mathAnswer;
+                    break;
+                
+                 case "/":
+                
+                    mathAnswer = firstNumber / secondNumber;
+                    displayAnswer = "Your JavaScript Calculator Results : <br/>" + firstNumber + " " +   mathOperation + " " + secondNumber + " = " + mathAnswer;
+                    break;
+                
+                 case "%":
+                
+                    mathAnswer = firstNumber % secondNumber;
+                    displayAnswer = "Your JavaScript Calculator Results : <br/>" + firstNumber + " " +   mathOperation + " " + secondNumber + " = " + mathAnswer;
+                    break;
+                 
+                 default:
+                
+                    mathAnswer = firstNumber + secondNumber;
+                    displayAnswer = "Your JavaScript Calculator Results : <br/> you did not enter a valid aretimatic operator. Therefore no math cacluation could be preformed!" ;
+            } 
+            
+            
+            document.getElementById('output').innerHTML = displayAnswer;
+        
+        </script>
+    
+    
+    </body>
+    
+</html>

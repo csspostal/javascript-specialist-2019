@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Camp Whack-a-Doo</title>
+        
+    </head>
+    
+    <body>
+        
+        <h1>Camp Whack-a-Doo Chore List</h1>
+        <label for="choreList">Chore List</label>
+        <select name="choreList" id="choreList" >
+        	<option value="Front Room Sweep">Front Room Sweep</option>
+            <option value="Back Room Sweep">Back Room Sweep</option>
+            <option value="Outside Grounds">Outside Grounds</option>
+            <option value="Clean Toilets">Clean Toilets</option>
+            <option value="Clean Sink">Clean Sink</option>
+            <option value="Trash Patrol and Supplies">Trash Patrol and Supplies</option>
+            
+        </select><br/><br/>
+        <label for="camperName">Camper Name</label>
+        <input type="text" id="camperName"/><br/><br/>
+        <button id="btnToAddChoreToMap">Assign Chore to Camper</button>
+        <button id="btnDisplayMap">Display Camper Chore List</button><br/><br/>
+        <div id="chores"></div>
+        
+        <script>
+            
+            const ADDBUTTON = document.getElementById('btnToAddChoreToMap');
+            const DISPLAYBUTTON = document.getElementById('btnDisplayMap');
+            let campChores = new Map();
+            
+            
+            ADDBUTTON.onclick = function(){
+                const choreList = document.getElementById('choreList');
+                const name = document.getElementById('camperName');
+                campChores.set(choreList.value, name.value);
+                choreList.value = "";
+                name.value = "";
+               
+            };
+            
+            DISPLAYBUTTON.onclick = function(){
+                let out = "";
+                for(let x of campChores.entries())
+                    {
+                        out += x[0] + " : " + x[1];
+                        out += "<br/>";
+                    }
+                document.getElementById('chores').innerHTML = out;
+            }
+        </script>
+        
+    </body>
+</html>

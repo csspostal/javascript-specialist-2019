@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Classes and Objects</title>
+        
+    </head>
+    
+    <body>
+        <div id="output"></div>
+        
+        <script src="model.js"></script>
+        <script>
+        
+                //create object or instance
+            
+            var myHonda = new Car("Sedan", "Honda", "Civic", 2017);
+            var myLexus = new Car("Sedan", "Lexus", "330", 2015);
+            
+            alert(myHonda.model);
+            myHonda.accelerate();
+            myHonda.accelerate();
+            myHonda.accelerate();
+            myHonda.accelerate();
+            myHonda.brake();
+           
+            alert(myLexus.model);
+            myLexus.accelerate();
+            alert(myLexus.make + " is going " + myLexus.speed + "mph");
+        
+        </script>
+        
+    </body>
+</html>
+

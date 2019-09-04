@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+    
+    </head>
+
+    
+    <body>
+        
+        <div id="output"></div>
+        
+        
+        
+        <script>
+            
+            let team = new Map();
+            team.set('pitcher','David Cone');
+            team.set('catcher', 'Jorge Pasada');
+            team.set('right_field', 'Dave Winfield');
+            
+            alert(team.get('right_field'));
+            
+            let music = new Map();
+            music.set('Journey','Faithfully')
+                 .set('Reo Speedwagon', 'Keep on Rolling')
+                 .set('Scandal', 'The Warrior');
+            
+            alert(music.get('Scandal'));
+            
+            let family = new Map([
+                ['mother', 'Joan'],
+                ['father', 'Rick'],
+                ['brother', 'Brett'],
+                ['sil', 'Kerry']
+            ])
+            
+            //alert(family.get('sil'));
+            
+            //family.clear();
+            
+            //for(let r of family.entries()) bot key and value
+            
+            //for(let r of family.keys())
+                
+                for(let r of family.values())
+            {
+               alert(r);
+                
+               // alert(r[0] + ": " + r[1]);
+                
+                
+            }
+            
+            // maps are great for values in key pairs 
+        
+        </script>
+    
+    
+    </body>
+    
+</html>

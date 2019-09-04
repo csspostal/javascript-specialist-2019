@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Destructuring Tom Spencer Javascript 2019 Exercise 13</title>
+        
+        
+        
+    </head>
+    
+    <body>
+        
+        <div id="output">
+        
+        <table>
+        
+                <thead>
+            
+                    <tr>
+                    <th>First Name:</th>
+                    <th>Last Name:</th>
+                    <th>Date of Birth:</th>
+                    <th>Spoken Languages</th>
+                    
+                    
+                    </tr>
+                    
+                </thead>
+            
+                <tr>
+                    
+                    
+                    <td id="rowOneFirstName"></td>
+                    <td id="rowOneLastName"></td>
+                    <td id="rowOneDateOfBirth"></td>
+                    <td id="rowOneSpokenLanguages"></td>
+            
+            
+                </tr>
+            
+                <tr>
+            
+                    <td id="rowTwoFirstName"></td>
+                    <td id="rowTwoLastName"></td>
+                    <td id="rowTwoDateOfBirth"></td>
+                    <td id="rowTwoSpokenLanguages"></td>
+            
+                </tr>
+            
+                <tr>
+            
+                    <td id="rowThreeFirstName"></td>
+                    <td id="rowThreeLastName"></td>
+                    <td id="rowThreeDateOfBirth"></td>
+                    <td id="rowThreeSpokenLanguages"></td>
+            
+                </tr>
+            
+                <tr>
+            
+                    <td id="rowFourFirstName"></td>
+                    <td id="rowFourLastName"></td>
+                    <td id="rowFourDateOfBirth"></td>
+                    <td id="rowFourSpokenLanguages"></td>
+            
+                </tr>
+            
+            
+            
+        </table>
+        
+        </div>
+        
+        <script>
+            
+            var userList = {
+                   "people": [
+
+                       {    firstName: "Fred",
+                            lastName: "Smith",
+                            dateOfBirth: 1980,
+                            spokenLanguages: {
+                                native: "English",
+                                fluent: "Spanish",
+                                intermediate: "Chinese" } 
+                       },
+                       {    firstName: "Monica",
+                            lastName: "Taylor",
+                            dateOfBirth: 1975,
+                            spokenLanguages: {
+                                native: "Spanish",
+                                fluent: "English",
+                                intermediate: "French" } 
+                       },
+                       {    firstName: "Maurice",
+                            lastName: "Edelson",
+                            dateOfBirth: 1992,
+                            spokenLanguages: {
+                                native: "English",
+                                fluent: "Spanish",
+                                } 
+                       },
+                       {    firstName: "Kelly",
+                            lastName: "Lang",
+                            dateOfBirth: 1982,
+                            spokenLanguages: {
+                                native: "English",
+                                fluent: "German",
+                                intermediate: "Dutch" } 
+                       }
+                ]
+                };
+            
+            //deconstructor for first row
+            
+            let {firstName, lastName, dateOfBirth,spokenLanguages} = userList.people["0"];
+            
+            //deconstructor for second row
+            
+            let {firstName: firstName1, lastName: lastName1, dateOfBirth: dateOfBirth1, spokenLanguages: spokenLanguages1} = userList.people["1"];
+            
+           //deconstructor for third row
+            
+            let {firstName: firstName2, lastName: lastName2, dateOfBirth: dateOfBirth2, spokenLanguages: spokenLanguages2} = userList.people["2"];
+            
+            //deconstructor for fourth row
+            
+            let {firstName: firstName3, lastName: lastName3, dateOfBirth: dateOfBirth3, spokenLanguages: spokenLanguages3} = userList.people["3"];
+            
+         
+            //first row table data
+            
+          document.getElementById('rowOneFirstName').innerHTML = firstName;
+           document.getElementById('rowOneLastName').innerHTML = lastName;
+            
+           document.getElementById('rowOneDateOfBirth').innerHTML = dateOfBirth;
+            
+          document.getElementById('rowOneSpokenLanguages').innerHTML = spokenLanguages.native + "<br/>" + spokenLanguages.fluent + "<br/>" + spokenLanguages.intermediate;
+            
+            //second row table data
+            
+            
+            document.getElementById('rowTwoFirstName').innerHTML = firstName1;
+           document.getElementById('rowTwoLastName').innerHTML = lastName1;
+            
+           document.getElementById('rowTwoDateOfBirth').innerHTML = dateOfBirth1;
+            
+          document.getElementById('rowTwoSpokenLanguages').innerHTML = spokenLanguages1.native + "<br/>" + spokenLanguages1.fluent + "<br/>" + spokenLanguages1.intermediate;
+            
+            // third row of table data
+            
+             document.getElementById('rowThreeFirstName').innerHTML = firstName2;
+           document.getElementById('rowThreeLastName').innerHTML = lastName2;
+            
+           document.getElementById('rowThreeDateOfBirth').innerHTML = dateOfBirth2;
+            
+          document.getElementById('rowThreeSpokenLanguages').innerHTML = spokenLanguages2.native + "<br/>" + spokenLanguages2.fluent + "<br/><br/>";
+            
+        //fourth row of table data
+            
+             document.getElementById('rowFourFirstName').innerHTML = firstName3;
+           document.getElementById('rowFourLastName').innerHTML = lastName3;
+            
+           document.getElementById('rowFourDateOfBirth').innerHTML = dateOfBirth3;
+            
+          document.getElementById('rowFourSpokenLanguages').innerHTML = spokenLanguages3.native + "<br/>" + spokenLanguages3.fluent + "<br/>" + spokenLanguages3.intermediate;
+            
+            
+            
+        </script>
+        
+    </body>
+</html>
