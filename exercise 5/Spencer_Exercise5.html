@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        
+        <title>Exercise 5 Submit This Tom Spencer JavaScript Application Development | Tom Spencer</title>
+    
+    
+    </head>
+
+    
+    <body>
+        
+        <div id="output"></div>
+        
+        <script>
+        
+            var firstPattern = "*";
+            var secondPattern = "-";
+            var loopCounter = 0;
+            var patternStop = 11;
+            var patternRepeat = 0;
+            
+            document.getElementById('output').innerHTML += "<h1>Section A</h1>"
+            
+            document.getElementById('output').innerHTML += "Pattern #1<br/>";
+            
+            
+            while (patternRepeat < patternStop) {
+          
+            
+            
+            do
+                
+                {
+                     
+                    
+                    
+                   
+                    document.getElementById('output').innerHTML += firstPattern.repeat(patternRepeat) + "<br/>";
+                    loopCounter++;
+                    
+                   
+                      
+                } while(loopCounter < patternRepeat);
+                
+                patternRepeat++;
+                  
+            }
+            
+            
+            //decending pyramid pattern
+            
+            patternStop = 0;
+            loopCounter = loopCounter - 2; //minus too to make sure it loops the proper amount of times 
+            
+             while (patternRepeat > patternStop) {
+          
+            
+            
+            do
+                
+                {
+                     
+                    
+                    
+                   
+                    document.getElementById('output').innerHTML += firstPattern.repeat(patternRepeat) + "<br/>";
+                    loopCounter--;
+                    
+                   
+                      
+                } while(loopCounter > patternRepeat);
+                
+                patternRepeat--;
+                  
+            }
+            
+            
+            document.getElementById('output').innerHTML += "Pattern #2<br/>";
+            
+            for (r = 0; r < 4; r++) {
+            
+            for (i = 0; i < 6; i++)
+                
+                {
+                    document.getElementById('output').innerHTML += firstPattern + secondPattern;
+                }
+                
+                document.getElementById('output').innerHTML += "<br>";
+            }
+            
+            
+            document.getElementById('output').innerHTML += "<br/><br/> Section B<br/><br/>";
+            
+            
+            var numberOfRows = parseInt(prompt("Enter Number of Rows requested"));
+            var numberOfColumns = parseInt(prompt("Enter Number of Columns requested"));
+            var pattern = "*"
+            
+            for (r = 0; r < numberOfRows; r++) {
+            
+            for (c = 0; c < numberOfColumns; c++)
+                
+                {
+                    document.getElementById('output').innerHTML += pattern;
+                }
+                
+                document.getElementById('output').innerHTML += "<br>";
+            }
+            
+            //do not attempt coding this when tires you'll want to hulk smash the keyboard. I got it done though.
+            
+            
+        </script>
+    
+    
+    </body>
+    
+</html>
