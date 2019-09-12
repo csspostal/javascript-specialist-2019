@@ -132,8 +132,10 @@
             // then create new array and splice the random
             // item out of the array
             
+            let bingoNumbers = Array.from(numbers);
+            
                 function callRandomNumber(set) {
-                    let bingoNumbers = Array.from(numbers);
+                    
                     let calledBall = bingoNumbers.splice([Math.floor(Math.random() * bingoNumbers.length)],1);
                     
                     numberVerification.push(calledBall);
